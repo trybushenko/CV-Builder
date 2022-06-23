@@ -36,31 +36,14 @@ def info(request):
 			education_2_dur=form.cleaned_data['education_2_dur']
 			education2_score=form.cleaned_data['education2_score']
 
-			data={'name':name}
-			data['email']=email
-			data['skills_1']=skills_1
-			data['skills_2']=skills_2
-			data['skills_3']=skills_3
-			data['skills_4']=skills_4
+			data= {'name': name, 'email': email, 'skills_1': skills_1, 'skills_2': skills_2, 'skills_3': skills_3,
+				   'skills_4': skills_4, 'mobile': mobile, 'address': address, 'experience_1_title': experience_1_title,
+				   'experience_1_dur': experience_1_dur, 'experience_1_desc': experience_1_desc,
+				   'experience_2_title': experience_2_title, 'experience_2_dur': experience_2_dur,
+				   'experience_2_desc': experience_2_desc, 'education_1': education_1,
+				   'education_1_dur': education_1_dur, 'education1_score': education1_score, 'education_2': education_2,
+				   'education_2_dur': education_2_dur, 'education2_score': education2_score}
 
-			data['mobile']=mobile
-			data['address']=address
-
-			data['experience_1_title']=experience_1_title
-			data['experience_1_dur']=experience_1_dur
-			data['experience_1_desc']=experience_1_desc
-
-			data['experience_2_title']=experience_2_title
-			data['experience_2_dur']=experience_2_dur
-			data['experience_2_desc']=experience_2_desc
-
-			data['education_1']=education_1
-			data['education_1_dur']=education_1_dur
-			data['education1_score']=education1_score
-
-			data['education_2']=education_2
-			data['education_2_dur']=education_2_dur
-			data['education2_score']=education2_score
 			return render(request,'home.html',data)
 			#to add more go to : forms.py
 			# print(name,email)

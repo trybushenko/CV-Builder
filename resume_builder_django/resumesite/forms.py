@@ -4,124 +4,36 @@ from crispy_forms.layout import Layout,Submit
 from crispy_forms.layout import Column
 from crispy_forms.layout import Row
 
-
-# class SkillWidget(forms.MultiWidget):
-# 	def __init__(self,attrs=None):
-# 		super().__init__([
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 		],attrs)
-
-# 	def decompress(self,value):
-# 		if value:
-# 			return value.split(' ')
-# 		return(['','','','','','',''])
-
-# class SkillsField(forms.MultiValueField):
-# 	widget=SkillWidget
-# 	def __init__(self,*args,**kwargs):
-# 		fields=(forms.CharField(),
-# 			forms.CharField(),
-# 			forms.CharField(),
-# 			forms.CharField(required=False),
-# 			forms.CharField(required=False),
-# 			forms.CharField(required=False),
-# 			forms.CharField(required=False),
-# 			)
-# 		super().__init__(fields,*args,**kwargs)
-
-# 	def compress(self,data_list):
-# 		return f'{data_list[0]} {data_list[1]} {data_list[2]} {data_list[3]} {data_list[4]} {data_list[5]} {data_list[6]}'
-
-
-# class ExpWidget(forms.MultiWidget):
-# 	def __init__(self,attrs=None):
-# 		super().__init__([
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput()#,
-# 		],attrs)
-
-# 	def decompress(self,value):
-# 		if value:
-# 			return value.split(' ')
-# 		return(['','',''])
-
-# class ExpField(forms.MultiValueField):
-# 	widget=ExpWidget
-# 	def __init__(self,*args,**kwargs):
-# 		fields=(forms.CharField(),#validators can be added
-# 			forms.CharField(),
-# 			forms.CharField(),
-# 			)
-# 		super().__init__(fields,*args,**kwargs)
-
-# 	def compress(self,data_list):
-# 		return f'{data_list[0]} {data_list[1]} {data_list[2]}'
-
-# class EduWidget(forms.MultiWidget):
-# 	def __init__(self,attrs=None):
-# 		super().__init__([
-# 			forms.TextInput(),
-# 			forms.TextInput(),
-# 			forms.TextInput()#,
-# 		],attrs)
-
-# 	def decompress(self,value):
-# 		if value:
-# 			return value.split(' ')
-# 		return(['','',''])
-
-# class EduField(forms.MultiValueField):
-# 	widget=EduWidget
-# 	def __init__(self,*args,**kwargs):
-# 		fields=(forms.CharField(),#validators can be added
-# 			forms.CharField(),
-# 			forms.CharField(),
-# 			)
-# 		super().__init__(fields,*args,**kwargs)
-
-# 	def compress(self,data_list):
-# 		return f'{data_list[0]} {data_list[1]} {data_list[2]}'
-
-
 class ContactForm(forms.Form):
 	name=forms.CharField()#required=False
 	email=forms.EmailField(label='E-Mail')
 	mobile=forms.CharField()
 	address=forms.CharField()
-	skills_1=forms.CharField()
-	skills_2=forms.CharField()
-	skills_3=forms.CharField(required=False)
-	skills_4=forms.CharField(required=False)
+	skills_1=forms.CharField(label='Skill 1')
+	skills_2=forms.CharField(label='Skill 2')
+	skills_3=forms.CharField(required=False, label='Skill 3')
+	skills_4=forms.CharField(required=False, label='Skill 4')
 
-	experience_1_title=forms.CharField()
-	experience_1_dur=forms.CharField()
-	experience_1_desc=forms.CharField()
+	experience_1_title=forms.CharField(label='Work or Volunteer Experience №1 title')
+	experience_1_dur=forms.CharField(label='Work or Volunteer Experience №1 duration')
+	experience_1_desc=forms.CharField(label='Work or Volunteer Experience №1 description')
 
-	experience_2_title=forms.CharField(required=False)
-	experience_2_dur=forms.CharField(required=False)
-	experience_2_desc=forms.CharField(required=False)
+	experience_2_title=forms.CharField(required=False, label='Work or Volunteer Experience №2 title')
+	experience_2_dur=forms.CharField(required=False, label='Work or Volunteer Experience №2 duration')
+	experience_2_desc=forms.CharField(required=False, label='Work or Volunteer Experience №2 description')
 
-	education_1=forms.CharField()
-	education_1_dur=forms.CharField()
-	education1_score=forms.CharField()
+	education_1=forms.CharField(label='Education №1 title')
+	education_1_dur=forms.CharField(label='Education №1 duration')
+	education1_score=forms.CharField(label='Education №1 score')
 
-	education_2=forms.CharField()
-	education_2_dur=forms.CharField()
-	education2_score=forms.CharField()
+	education_2=forms.CharField(label='Education №2 title')
+	education_2_dur=forms.CharField(label='Education №2 duration')
+	education2_score=forms.CharField(label='Education №2 score')
 
 	def __init__(self,*args,**kwargs):
 		super().__init__(*args,**kwargs)
 		self.helper=FormHelper
 		self.helper.form_class = ' container justify-content-center '
-		# self.helper.label_class = ''
-		# self.helper.field_class = 'col-md-6 col-xs-9'
 		self.helper.form_method="post"
 		self.helper.layout=Layout(
 			Row(

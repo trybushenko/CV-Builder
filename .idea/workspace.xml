@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24557756-1f6f-45ab-8e7c-c6e4ae9e7e11" name="Changes" comment="" />
+    <list default="true" id="24557756-1f6f-45ab-8e7c-c6e4ae9e7e11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Resume_builder.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +51,7 @@
       <updated>1655925807320</updated>
       <workItem from="1655925808437" duration="3987000" />
       <workItem from="1655972179074" duration="2803000" />
-      <workItem from="1656014430209" duration="305000" />
+      <workItem from="1656014430209" duration="526000" />
     </task>
     <servers />
   </component>

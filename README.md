@@ -23,3 +23,8 @@ First thing first, a start page appears and asks you to fill forms which informa
 2) ![Alt text](https://github.com/trybushenko/CV-Builder/blob/master/screenshots/start_page_2part.png?raw=true "Optional Title")
 3) Then CV is ready!
 ![Alt text](https://github.com/trybushenko/CV-Builder/blob/master/screenshots/ready_CV.png?raw=true "Optional Title")
+
+Features to be created:
+1) PDF CV converting
+2) Custom photo including
+3) Ability to add needed count of skills, but not only 4

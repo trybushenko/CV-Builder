@@ -14,3 +14,12 @@ How to set up?
 Additional libraries :
    Django 
    Crispy forms
+   
+The whole flow of this simple web-app:
+
+First thing first, a start page appears and asks you to fill forms which information will  be included in CV:
+
+1) ![Alt text](https://github.com/trybushenko/CV-Builder/blob/master/screenshots/start_page_1part.png?raw=true "Optional Title")
+2) ![Alt text](https://github.com/trybushenko/CV-Builder/blob/master/screenshots/start_page_2part.png?raw=true "Optional Title")
+3) Then CV is ready!
+![Alt text](https://github.com/trybushenko/CV-Builder/blob/master/screenshots/ready_CV.png?raw=true "Optional Title")
